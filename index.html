@@ -1,0 +1,1629 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mah Dining Room | South-South Kitchen, Benin City</title>
+    <meta name="description" content="Mah Dining Room — Chef Mahmud's table of Afang, Banga, Edo Black Soup, Ukodo and Onunu, on Airport Road, Benin City, Edo State." />
+
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+    <style>
+        :root {
+            --ink: #14100c;
+            --ink-2: #1c1610;
+            --ink-3: #241c14;
+            --bronze: #b98a46;
+            --bronze-soft: #d9b479;
+            --bronze-deep: #7c5527;
+            --coral: #7a2331;
+            --coral-bright: #9c3244;
+            --ivory: #f2e8d6;
+            --ivory-dim: #cfc2a8;
+            --palm: #4c5e37;
+            --palm-light: #7a9457;
+            --radius: 2px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: var(--ink);
+            color: var(--ivory);
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            letter-spacing: .01em;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-display {
+            font-family: 'Cinzel', serif;
+            letter-spacing: .03em;
+            color: var(--ivory);
+        }
+        .eyebrow {
+            font-family: 'Jost', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .32em;
+            font-size: .72rem;
+            color: var(--bronze-soft);
+            font-weight: 500;
+        }
+        a {
+            color: var(--bronze-soft);
+            text-decoration: none;
+        }
+        a:hover {
+            color: var(--bronze);
+        }
+
+        /* bead divider */
+        .bead-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .55rem;
+            margin: 2.2rem 0;
+            opacity: .9;
+        }
+        .bead-divider span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--coral-bright);
+            box-shadow: 0 0 0 1px rgba(185, 138, 70, .5);
+        }
+        .bead-divider span:nth-child(4) {
+            width: 9px;
+            height: 9px;
+            background: var(--bronze);
+        }
+        .bead-divider::before,
+        .bead-divider::after {
+            content: "";
+            height: 1px;
+            width: 64px;
+            background: linear-gradient(90deg, transparent, var(--bronze-deep));
+        }
+        .bead-divider::after {
+            background: linear-gradient(90deg, var(--bronze-deep), transparent);
+        }
+
+        /* plaque */
+        .plaque {
+            position: relative;
+            padding: 10px;
+            background: linear-gradient(155deg, var(--ink-3), var(--ink-2));
+            border: 1px solid var(--bronze-deep);
+        }
+        .plaque img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .plaque::before,
+        .plaque::after,
+        .plaque .corner-tl,
+        .plaque .corner-br {
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border: 1px solid var(--bronze);
+            background: var(--ink);
+            transform: rotate(45deg);
+            z-index: 2;
+        }
+        .plaque::before {
+            top: -7px;
+            left: -7px;
+        }
+        .plaque::after {
+            bottom: -7px;
+            right: -7px;
+        }
+        .plaque .corner-tl {
+            top: -7px;
+            right: -7px;
+        }
+        .plaque .corner-br {
+            bottom: -7px;
+            left: -7px;
+        }
+
+        /* Navbar */
+        .navbar-mdr {
+            background: rgba(20, 16, 12, .92);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--bronze-deep);
+            padding-top: .85rem;
+            padding-bottom: .85rem;
+        }
+        .navbar-mdr .brand-mark {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 1.28rem;
+            color: var(--ivory);
+            letter-spacing: .06em;
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+        }
+        .navbar-mdr .brand-mark .ring {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 1.5px solid var(--bronze);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .85rem;
+            color: var(--bronze-soft);
+            flex-shrink: 0;
+        }
+        .navbar-mdr .nav-link {
+            color: var(--ivory-dim) !important;
+            font-size: .85rem;
+            text-transform: uppercase;
+            letter-spacing: .14em;
+            padding: .5rem 1rem !important;
+            transition: color .2s;
+        }
+        .navbar-mdr .nav-link:hover,
+        .navbar-mdr .nav-link.active {
+            color: var(--bronze-soft) !important;
+        }
+        .navbar-mdr .dropdown-menu {
+            background: var(--ink-2);
+            border: 1px solid var(--bronze-deep);
+            border-radius: 0;
+        }
+        .navbar-mdr .dropdown-item {
+            color: var(--ivory-dim);
+            font-size: .85rem;
+            letter-spacing: .05em;
+        }
+        .navbar-mdr .dropdown-item:hover {
+            background: var(--ink-3);
+            color: var(--bronze-soft);
+        }
+        .btn-bronze {
+            background: linear-gradient(180deg, var(--bronze-soft), var(--bronze-deep));
+            color: var(--ink) !important;
+            border: none;
+            font-family: 'Jost', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .14em;
+            font-size: .78rem;
+            font-weight: 600;
+            padding: .65rem 1.5rem;
+            border-radius: 0;
+            transition: filter .2s;
+        }
+        .btn-bronze:hover {
+            filter: brightness(1.08);
+            color: var(--ink);
+        }
+        .btn-outline-ivory {
+            border: 1px solid var(--bronze);
+            color: var(--ivory) !important;
+            background: transparent;
+            text-transform: uppercase;
+            letter-spacing: .14em;
+            font-size: .78rem;
+            padding: .62rem 1.5rem;
+            border-radius: 0;
+            transition: background .2s, color .2s;
+        }
+        .btn-outline-ivory:hover {
+            background: var(--bronze);
+            color: var(--ink) !important;
+        }
+        .btn-delivery {
+            background: var(--palm);
+            color: var(--ivory) !important;
+            border: 1px solid var(--palm-light);
+            font-family: 'Jost', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .14em;
+            font-size: .78rem;
+            font-weight: 500;
+            padding: .62rem 1.5rem;
+            border-radius: 0;
+            transition: background .25s, color .25s, border-color .25s;
+        }
+        .btn-delivery:hover {
+            background: var(--palm-light);
+            color: var(--ink) !important;
+            border-color: var(--bronze);
+        }
+        .btn-order {
+            background: var(--coral-bright);
+            color: var(--ivory) !important;
+            border: 1px solid var(--coral);
+            font-family: 'Jost', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: .14em;
+            font-size: .78rem;
+            font-weight: 600;
+            padding: .62rem 1.5rem;
+            border-radius: 0;
+            transition: background .25s, color .25s, border-color .25s;
+        }
+        .btn-order:hover {
+            background: var(--coral);
+            color: var(--ivory) !important;
+            border-color: var(--bronze-soft);
+        }
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(180deg, rgba(20, 16, 12, .55), rgba(20, 16, 12, .94)), url('{{GAL1_IMG}}') center 30%/cover no-repeat;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 20%, rgba(122, 35, 49, .18), transparent 55%);
+            pointer-events: none;
+        }
+        .hero h1 {
+            font-size: clamp(2.6rem, 6vw, 4.6rem);
+            line-height: 1.05;
+        }
+        .hero .lede {
+            font-size: 1.15rem;
+            color: var(--ivory-dim);
+            max-width: 36rem;
+            font-weight: 300;
+        }
+        .stat-strip {
+            border-top: 1px solid var(--bronze-deep);
+            border-bottom: 1px solid var(--bronze-deep);
+        }
+        .stat-strip .stat b {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            color: var(--bronze-soft);
+            display: block;
+        }
+        .stat-strip .stat span {
+            font-size: .72rem;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--ivory-dim);
+        }
+
+        section {
+            padding: 5.5rem 0;
+        }
+        .bg-ink-2 {
+            background: var(--ink-2);
+        }
+        .bg-ink-3 {
+            background: var(--ink-3);
+        }
+
+        .section-head {
+            max-width: 38rem;
+        }
+        .section-head h2 {
+            font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+            margin-top: .4rem;
+        }
+
+        /* About */
+        .about-quote {
+            border-left: 2px solid var(--bronze);
+            padding-left: 1.4rem;
+            font-family: 'Cinzel', serif;
+            font-size: 1.15rem;
+            color: var(--bronze-soft);
+            font-weight: 500;
+        }
+
+        /* Menu */
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--bronze-deep);
+            color: var(--ivory-dim);
+            padding: .55rem 1.35rem;
+            font-size: .78rem;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+            border-radius: 0;
+            transition: .2s;
+        }
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--bronze);
+            color: var(--ink);
+            border-color: var(--bronze);
+        }
+        .dish-card {
+            background: var(--ink-2);
+            border: 1px solid var(--bronze-deep);
+            height: 100%;
+            transition: transform .25s ease, border-color .25s ease;
+            overflow: hidden;
+        }
+        .dish-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--bronze);
+        }
+        .dish-photo {
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            position: relative;
+            background: var(--ink-3);
+        }
+        .dish-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .5s ease;
+        }
+        .dish-card:hover .dish-photo img {
+            transform: scale(1.06);
+        }
+        .dish-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(20, 16, 12, .82);
+            border: 1px solid var(--bronze);
+            color: var(--bronze-soft);
+            font-size: .65rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            padding: .28rem .6rem;
+            z-index: 2;
+        }
+        .dish-body {
+            padding: 1.2rem 1.3rem 1.4rem;
+        }
+        .dish-body h5 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            margin-bottom: .35rem;
+        }
+        .dish-origin {
+            font-size: .72rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--palm-light);
+        }
+        .dish-desc {
+            font-size: .87rem;
+            color: var(--ivory-dim);
+            line-height: 1.55;
+        }
+        .dish-price {
+            font-family: 'Cinzel', serif;
+            color: var(--bronze-soft);
+            font-size: 1.05rem;
+            border-top: 1px solid var(--bronze-deep);
+            margin-top: .9rem;
+            padding-top: .7rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .icon-medal {
+            width: 64px;
+            height: 64px;
+            border: 1.5px solid var(--bronze);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at 35% 30%, var(--ink-3), var(--ink));
+            flex-shrink: 0;
+        }
+        .icon-medal svg {
+            width: 30px;
+            height: 30px;
+            stroke: var(--bronze-soft);
+        }
+
+        /* Testimonials - Animation */
+        .testi-card {
+            background: var(--ink-2);
+            border: 1px solid var(--bronze-deep);
+            padding: 2rem 1.8rem;
+            height: 100%;
+            transition: border-color .3s, opacity 0.8s ease, transform 0.8s ease;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .testi-card.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .testi-card:nth-child(2) {
+            transition-delay: 0.1s;
+        }
+        .testi-card:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+        .testi-card:nth-child(4) {
+            transition-delay: 0.3s;
+        }
+        .testi-card:nth-child(5) {
+            transition-delay: 0.4s;
+        }
+        .testi-card:nth-child(6) {
+            transition-delay: 0.5s;
+        }
+        .testi-card:hover {
+            border-color: var(--bronze);
+        }
+        .testi-card .stars {
+            color: var(--bronze);
+            letter-spacing: .15em;
+            font-size: .85rem;
+        }
+        .testi-card p {
+            font-size: .95rem;
+            color: var(--ivory-dim);
+            font-style: italic;
+            line-height: 1.7;
+        }
+        .testi-name {
+            font-family: 'Cinzel', serif;
+            color: var(--ivory);
+            font-size: .95rem;
+        }
+        .testi-role {
+            font-size: .72rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--palm-light);
+        }
+
+        /* Delivery - Animation */
+        @keyframes float-bob {
+            0% {
+                transform: translateY(0px) scale(1);
+            }
+            50% {
+                transform: translateY(-12px) scale(1.05);
+            }
+            100% {
+                transform: translateY(0px) scale(1);
+            }
+        }
+        .delivery-card .delivery-icon {
+            display: inline-block;
+            animation: float-bob 3s ease-in-out infinite;
+            font-size: 2.8rem;
+            line-height: 1;
+            margin-bottom: .8rem;
+        }
+        .delivery-card:nth-child(2) .delivery-icon {
+            animation-delay: 0.2s;
+        }
+        .delivery-card:nth-child(3) .delivery-icon {
+            animation-delay: 0.4s;
+        }
+        .delivery-card:nth-child(4) .delivery-icon {
+            animation-delay: 0.6s;
+        }
+
+        .delivery-card {
+            background: var(--ink-2);
+            border: 1px solid var(--bronze-deep);
+            padding: 2.2rem;
+            text-align: center;
+            transition: border-color .3s, transform .3s;
+            height: 100%;
+        }
+        .delivery-card:hover {
+            border-color: var(--bronze);
+            transform: translateY(-5px);
+        }
+        .delivery-card h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--bronze-soft);
+        }
+        .delivery-card p {
+            color: var(--ivory-dim);
+            font-size: .95rem;
+        }
+
+        /* Gallery */
+        .gal-item {
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            border: 1px solid var(--bronze-deep);
+            background: var(--ink-3);
+        }
+        .gal-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .5s ease, filter .5s ease;
+        }
+        .gal-item:hover img {
+            transform: scale(1.08);
+        }
+        .gal-item .gal-cap {
+            position: absolute;
+            inset: auto 0 0 0;
+            background: linear-gradient(0deg, rgba(20, 16, 12, .92), transparent);
+            padding: .9rem .8rem .6rem;
+            font-size: .72rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--ivory-dim);
+            opacity: 0;
+            transform: translateY(6px);
+            transition: .3s;
+        }
+        .gal-item:hover .gal-cap {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Reservations */
+        .form-control,
+        .form-select {
+            background: var(--ink-2);
+            border: 1px solid var(--bronze-deep);
+            color: var(--ivory);
+            border-radius: 0;
+            padding: .65rem .9rem;
+            font-family: 'Jost', sans-serif;
+        }
+        .form-control:focus,
+        .form-select:focus {
+            background: var(--ink-2);
+            color: var(--ivory);
+            border-color: var(--bronze);
+            box-shadow: 0 0 0 .18rem rgba(185, 138, 70, .18);
+        }
+        .form-control::placeholder {
+            color: #8a7d68;
+        }
+        .form-label {
+            font-size: .72rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--bronze-soft);
+            margin-bottom: .4rem;
+        }
+        .reserve-panel {
+            background: var(--ink-2);
+            border: 1px solid var(--bronze-deep);
+            padding: 2.2rem;
+        }
+        .reserve-side {
+            background: linear-gradient(160deg, var(--ink-3), var(--ink));
+            border: 1px solid var(--bronze-deep);
+            padding: 2.2rem;
+            height: 100%;
+        }
+        .reserve-side li {
+            padding: .5rem 0;
+            border-bottom: 1px dashed rgba(185, 138, 70, .25);
+            font-size: .9rem;
+            color: var(--ivory-dim);
+        }
+        .reserve-side li:last-child {
+            border-bottom: none;
+        }
+        .reserve-side li b {
+            color: var(--ivory);
+            font-weight: 500;
+        }
+
+        /* Contact */
+        .contact-card {
+            background: var(--ink-2);
+            border: 1px solid var(--bronze-deep);
+            padding: 1.6rem;
+        }
+        .map-frame {
+            border: 1px solid var(--bronze-deep);
+            filter: grayscale(.35) contrast(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--ink-3);
+            border-top: 1px solid var(--bronze-deep);
+            padding: 3.5rem 0 1.5rem;
+        }
+        footer h6 {
+            font-family: 'Cinzel', serif;
+            color: var(--bronze-soft);
+            font-size: .85rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        footer a {
+            color: var(--ivory-dim);
+            font-size: .88rem;
+        }
+        footer a:hover {
+            color: var(--bronze-soft);
+        }
+        .social-ring {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid var(--bronze-deep);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .2s;
+        }
+        .social-ring:hover {
+            border-color: var(--bronze);
+            background: rgba(185, 138, 70, .1);
+        }
+        .social-ring svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--bronze-soft);
+        }
+        .foot-bottom {
+            border-top: 1px solid rgba(185, 138, 70, .18);
+            margin-top: 2.5rem;
+            padding-top: 1.4rem;
+            font-size: .78rem;
+            color: #8a7d68;
+        }
+
+        /* Toast */
+        #rsvToast {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 2000;
+            background: var(--ink-2);
+            border: 1px solid var(--bronze);
+            color: var(--ivory);
+            padding: 1rem 1.4rem;
+            max-width: 320px;
+            transform: translateY(140%);
+            transition: transform .4s ease;
+            font-size: .88rem;
+        }
+        #rsvToast.show {
+            transform: translateY(0);
+        }
+        #rsvToast strong {
+            color: var(--bronze-soft);
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Lightbox */
+        .lightbox-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 8, 6, .92);
+            z-index: 3000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .lightbox-backdrop.show {
+            display: flex;
+        }
+        .lightbox-backdrop img {
+            max-width: min(90vw, 900px);
+            max-height: 85vh;
+            border: 1px solid var(--bronze);
+            object-fit: contain;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 1.4rem;
+            right: 1.6rem;
+            color: var(--ivory);
+            font-size: 1.8rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        /* Order Modal */
+        .order-modal .modal-content {
+            background: var(--ink-2);
+            border: 1px solid var(--bronze);
+            border-radius: 0;
+            color: var(--ivory);
+        }
+        .order-modal .modal-header {
+            border-bottom: 1px solid var(--bronze-deep);
+        }
+        .order-modal .modal-footer {
+            border-top: 1px solid var(--bronze-deep);
+        }
+        .order-modal .btn-close {
+            filter: invert(1) brightness(2);
+        }
+
+        @media (max-width: 991px) {
+            section {
+                padding: 3.8rem 0;
+            }
+            .hero {
+                min-height: 88vh;
+            }
+        }
+        @media (max-width: 575.98px) {
+            .btn-bronze,
+            .btn-outline-ivory,
+            .btn-delivery,
+            .btn-order {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+            .d-grid.d-sm-flex {
+                gap: 0.5rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg navbar-mdr fixed-top">
+        <div class="container">
+            <a class="navbar-brand brand-mark" href="#home">
+                <span class="ring">M</span> Mah Dining Room
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mdrNav" style="border-color:var(--bronze-deep);">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mdrNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#menu" data-bs-toggle="dropdown">Menu</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#menu" data-cat="main">Main Dish</a></li>
+                            <li><a class="dropdown-item" href="#menu" data-cat="grills">Grills &amp; Protein</a></li>
+                            <li><a class="dropdown-item" href="#menu" data-cat="chops">Small Chops &amp; Dessert</a></li>
+                            <li><a class="dropdown-item" href="#menu" data-cat="drinks">Drinks</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reservations">Reservations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#delivery">Delivery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a href="#delivery" class="btn btn-delivery">Delivery</a>
+                    </li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a href="#" class="btn btn-order" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</a>
+                    </li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a href="#reservations" class="btn btn-bronze">Reserve</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="hero" id="home">
+        <div class="container position-relative" style="z-index:2;">
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="eyebrow mb-3">Airport Road &middot; Benin City &middot; Edo State</p>
+                    <h1 class="font-display mb-4">A Table Cast<br>in the Niger Delta's Fire</h1>
+                    <p class="lede mb-4">Mah Dining Room brings the soup pots of Akwa Ibom, Delta, Rivers and Edo under one roof &mdash; built by Chef Mahmud, plated with the craft Benin City is known for.</p>
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                        <a href="#reservations" class="btn btn-bronze">Reserve a Table</a>
+                        <a href="#menu" class="btn btn-outline-ivory">See the Menu</a>
+                        <a href="#" class="btn btn-order" data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="position-absolute bottom-0 start-0 end-0 stat-strip py-3 bg-black bg-opacity-25" style="z-index:2;">
+            <div class="container">
+                <div class="row text-center g-3">
+                    <div class="col-6 col-md-3 stat"><b>5</b><span>South-South States</span></div>
+                    <div class="col-6 col-md-3 stat"><b>18+</b><span>Signature Soups</span></div>
+                    <div class="col-6 col-md-3 stat"><b>100%</b><span>Palm-Oil Fired</span></div>
+                    <div class="col-6 col-md-3 stat"><b>Daily</b><span>10AM &ndash; 10PM</span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="bg-ink-2">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <div class="plaque mx-auto" style="max-width:380px;">
+                        <span class="corner-tl"></span><span class="corner-br"></span>
+                        <img src="imgchef.jpeg" alt="Chef Mahmud, founder of Mah Dining Room">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <p class="eyebrow mb-2">The Founder</p>
+                    <h2 class="font-display mb-4">Chef Mahmud</h2>
+                    <p class="about-quote mb-4">"A pot of Afang doesn't lie about where it was cooked. Ours is cooked at home."</p>
+                    <p class="text-secondary-ivory mb-3" style="color:var(--ivory-dim);">Chef Mahmud trained in kitchens along the Delta coastline before returning to Benin City to open a dining room that treats South-South cooking as the fine cuisine it has always been. Every soup on this menu is pounded, ground and simmered the way it would be in an Uyo kitchen, a Warri compound, or an Edo family house on a Sunday.</p>
+                    <p class="mb-4" style="color:var(--ivory-dim);">The restaurant itself sits on Airport Road, its interior detailing borrowed from Benin's bronze-casting tradition &mdash; a nod to the guild of artisans that once cast plaques for the Oba's palace, a few kilometres from where we now cast our own pepper soup.</p>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-medal"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M12 3c2 3 4 5 4 8a4 4 0 0 1-8 0c0-1.2.5-2 1-3 .3 1 1 1.5 1 1.5C9 7 10 5 12 3z"/></svg></div>
+                                <div><b style="color:var(--ivory)">Wood &amp; Palm Oil</b><br><span style="font-size:.8rem;color:var(--ivory-dim)">Cooked the traditional way</span></div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-medal"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.4"><path d="M4 10l8-6 8 6M6 10v9h12v-9M10 19v-5h4v5"/></svg></div>
+                                <div><b style="color:var(--ivory)">Family Table</b><br><span style="font-size:.8rem;color:var(--ivory-dim)">Seating &amp; private dining</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bead-divider"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+    <!-- ================= MENU ================= -->
+    <section id="menu">
+        <div class="container">
+            <div class="section-head mx-auto text-center">
+                <p class="eyebrow">The Menu</p>
+                <h2 class="font-display">Five States, One Table</h2>
+                <p style="color:var(--ivory-dim)">Filter by category to find the soup, the grill, the small chop or the drink you came for.</p>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-center gap-2 my-5" id="filterBar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="main">Main Dish</button>
+                <button class="filter-btn" data-filter="grills">Grills &amp; Protein</button>
+                <button class="filter-btn" data-filter="chops">Small Chops &amp; Dessert</button>
+                <button class="filter-btn" data-filter="drinks">Drinks</button>
+            </div>
+
+            <div class="row g-4" id="menuGrid">
+
+                <!-- ===== MAIN DISH ===== -->
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="main">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Akwa Ibom / Cross River</span><img src="Afang.jpeg" alt="Afang Soup"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Main Dish</span>
+                            <h5>Afang Soup</h5>
+                            <p class="dish-desc">Shredded afang and waterleaf simmered with palm oil, heavy seafood and assorted meat until dark and rich.</p>
+                            <div class="dish-price"><span>Restaurant plate, with swallow</span><span>&#8358;18,000</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="main">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Delta / Urhobo</span><img src="Banga.jpeg" alt="Banga Soup and Starch"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Main Dish</span>
+                            <h5>Banga Soup &amp; Starch</h5>
+                            <p class="dish-desc">Palm fruit concentrate spiced with oroma, beletete and local spices, paired with elastic cassava starch (Usi).</p>
+                            <div class="dish-price"><span>Full portion</span><span>&#8358;13,000</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="main">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Edo</span><img src="Black.jpeg" alt="Edo Black Soup Omoebe"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Main Dish</span>
+                            <h5>Edo Black Soup &mdash; Omoebe</h5>
+                            <p class="dish-desc">A dark, savoury blend of roasted and ground scent leaf, bitterleaf and uziza, best taken with pounded yam.</p>
+                            <div class="dish-price"><span>Restaurant plate</span><span>&#8358;18,000</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="main">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Delta / Urhobo</span><img src="imagho.jpeg" alt="Ukodo yam pepper soup"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Main Dish</span>
+                            <h5>Ukodo</h5>
+                            <p class="dish-desc">Yam and unripe plantain pepper soup pottage, cooked low with goat meat, fish, lemongrass and potash.</p>
+                            <div class="dish-price"><span>Buka portion</span><span>&#8358;15,000</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="main">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Rivers State</span><img src="Onu.jpeg" alt="Onunu and fish pepper soup"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Main Dish</span>
+                            <h5>Onunu &amp; Fish Pepper Soup</h5>
+                            <p class="dish-desc">Pounded boiled yam and ripe plantain worked through with palm oil, served beside a hot, fresh fish pepper soup.</p>
+                            <div class="dish-price"><span>Full set</span><span>&#8358;22,000</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== GRILLS & PROTEIN ===== -->
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="grills">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Grills</span><img src="Suya.jpeg" alt="Suya Skewers"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Grills &amp; Protein</span>
+                            <h5>Suya Skewers</h5>
+                            <p class="dish-desc">Beef suya rolled in groundnut spice, charred over open flame, served with onions and fresh tomato.</p>
+                            <div class="dish-price"><span>Per portion</span><span>&#8358;6,500</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="grills">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Grills</span><img src="Cat.jpeg" alt="Grilled Catfish"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Grills &amp; Protein</span>
+                            <h5>Grilled Catfish</h5>
+                            <p class="dish-desc">Whole catfish, dry-rubbed and grilled, finished with a pepper-and-onion sauce.</p>
+                            <div class="dish-price"><span>Per portion</span><span>&#8358;12,000</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="grills">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Grills</span><img src="Azu.jpeg" alt="Asun Spiced Goat"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Grills &amp; Protein</span>
+                            <h5>Asun (Spiced Goat)</h5>
+                            <p class="dish-desc">Diced goat meat, smoked and tossed in a fiery pepper and onion glaze.</p>
+                            <div class="dish-price"><span>Per portion</span><span>&#8358;9,500</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="grills">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Grills</span><img src="Tuk.jpeg" alt="Peppered Turkey"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Grills &amp; Protein</span>
+                            <h5>Peppered Turkey</h5>
+                            <p class="dish-desc">Turkey wings, fried and tossed through fresh pepper sauce and sliced onions.</p>
+                            <div class="dish-price"><span>Per portion</span><span>&#8358;8,000</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== SMALL CHOPS & DESSERT ===== -->
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="chops">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Small Chops</span><img src="Puf.jpeg" alt="Puff-Puff Basket"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Small Chops</span>
+                            <h5>Puff-Puff Basket</h5>
+                            <p class="dish-desc">Warm, lightly sweet fried dough balls, served in a woven basket.</p>
+                            <div class="dish-price"><span>Basket of 10</span><span>&#8358;3,000</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="chops">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Small Chops</span><img src="Chin.jpeg" alt="Chin Chin"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Small Chops</span>
+                            <h5>Chin Chin</h5>
+                            <p class="dish-desc">Crunchy, lightly spiced fried pastry cubes, made fresh in-house.</p>
+                            <div class="dish-price"><span>Bowl</span><span>&#8358;2,500</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="chops">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Small Chops</span><img src="Sam.jpeg" alt="Spring Roll and Samosa"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Small Chops</span>
+                            <h5>Spring Roll &amp; Samosa Platter</h5>
+                            <p class="dish-desc">A mixed platter of vegetable spring rolls and beef samosas, served with pepper dip.</p>
+                            <div class="dish-price"><span>Platter</span><span>&#8358;5,500</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="chops">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Dessert</span><img src="Zob.jpeg" alt="Zobo Sorbet"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Dessert</span>
+                            <h5>Zobo Sorbet</h5>
+                            <p class="dish-desc">House-made hibiscus sorbet, spiced with ginger, pineapple and clove.</p>
+                            <div class="dish-price"><span>Scoop</span><span>&#8358;2,000</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="chops">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Dessert</span><img src="Co.jpeg" alt="Coconut Chips"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Dessert</span>
+                            <h5>Coconut Chips</h5>
+                            <p class="dish-desc">Thin coconut shavings, roasted golden and lightly salted.</p>
+                            <div class="dish-price"><span>Bowl</span><span>&#8358;2,200</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== DRINKS ===== -->
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="drinks">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Drinks</span><img src="zobo.jpeg" alt="Zobo"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Drinks</span>
+                            <h5>Zobo</h5>
+                            <p class="dish-desc">Chilled hibiscus drink, spiced with ginger, pineapple and cloves.</p>
+                            <div class="dish-price"><span>Jug</span><span>&#8358;3,500</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="drinks">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Drinks</span><img src="Chap.jpeg" alt="Chapman"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Drinks</span>
+                            <h5>Chapman</h5>
+                            <p class="dish-desc">Our house Chapman, mixed with grenadine, bitters and fresh fruit.</p>
+                            <div class="dish-price"><span>Glass</span><span>&#8358;4,000</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 menu-item" data-cat="drinks">
+                    <div class="dish-card">
+                        <div class="dish-photo"><span class="dish-tag">Drinks</span><img src="Palm.jpeg" alt="Fresh Palm Wine"></div>
+                        <div class="dish-body">
+                            <span class="dish-origin">Drinks</span>
+                            <h5>Fresh Tapped Palm Wine</h5>
+                            <p class="dish-desc">Sourced daily from local tappers along Airport Road, served chilled.</p>
+                            <div class="dish-price"><span>Calabash</span><span>&#8358;5,000</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="bead-divider"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+    <!-- ================= TESTIMONIALS (with animation) ================= -->
+    <section class="bg-ink-2" id="feedback">
+        <div class="container">
+            <div class="section-head mx-auto text-center mb-5">
+                <p class="eyebrow">Guest Book</p>
+                <h2 class="font-display">Voices From the Table</h2>
+                <p style="color:var(--ivory-dim)">Real feedback from diners who have made Mah Dining Room their favourite table in Benin City.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testi-card">
+                        <div class="stars mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>"First time I had Onunu outside my mother's kitchen that tasted this correct. The pepper soup on the side did the rest of the job."</p>
+                        <div class="mt-3"><span class="testi-name">Efe Okonta</span><br><span class="testi-role">Warri, Delta State</span></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testi-card">
+                        <div class="stars mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>"We booked the private table for a birthday dinner. The Edo Black Soup and the bronze-panel walls made the night feel like an occasion."</p>
+                        <div class="mt-3"><span class="testi-name">Osaretin Igbinedion</span><br><span class="testi-role">Benin City, Edo State</span></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testi-card">
+                        <div class="stars mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>"Banga and Usi cooked the way my grandmother used to insist on. I've stopped trying other places in town for it."</p>
+                        <div class="mt-3"><span class="testi-name">Blessing Etuk</span><br><span class="testi-role">Uyo, Akwa Ibom</span></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testi-card">
+                        <div class="stars mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>"The Asun was so tender and the pepper sauce had just the right heat. Delivery arrived hot and on time — I've ordered three times this month."</p>
+                        <div class="mt-3"><span class="testi-name">Chidi Okafor</span><br><span class="testi-role">Benin City, Edo State</span></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testi-card">
+                        <div class="stars mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>"The Afang soup from Mah Dining Room is the best I've had outside Akwa Ibom. My family now orders every Sunday — it's become our tradition."</p>
+                        <div class="mt-3"><span class="testi-name">Idara Ntekim</span><br><span class="testi-role">Uyo, Akwa Ibom</span></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testi-card">
+                        <div class="stars mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        <p>"The atmosphere, the lighting, the service — and most of all the food. Mah Dining Room has set a new standard for South-South dining in Benin."</p>
+                        <div class="mt-3"><span class="testi-name">Adaobi Nwosu</span><br><span class="testi-role">Lagos / Benin City</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= GALLERY ================= -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-head mx-auto text-center mb-5">
+                <p class="eyebrow">Gallery</p>
+                <h2 class="font-display">Inside Mah Dining Room</h2>
+            </div>
+            <div class="row g-3">
+                <div class="col-6 col-md-4 gal-item" style="height:280px;" onclick="openLightbox('{{GAL1_IMG}}')">
+                    <img src="Front.jpeg" alt="Dining hall with hanging greenery"><div class="gal-cap">The Dining Hall</div>
+                </div>
+                <div class="col-6 col-md-4 gal-item" style="height:280px;" onclick="openLightbox('{{GAL2_IMG}}')">
+                    <img src="Dan.jpeg" alt="Evening lounge lighting"><div class="gal-cap">Evening Lounge</div>
+                </div>
+                <div class="col-6 col-md-4 gal-item" style="height:280px;" onclick="openLightbox('{{GAL3_IMG}}')">
+                    <img src="All.jpeg" alt="Table set for two with roses"><div class="gal-cap">Table for Two</div>
+                </div>
+                <div class="col-6 col-md-4 gal-item" style="height:280px;" onclick="openLightbox('{{AFANG_IMG}}')">
+                    <img src="Bar.jpeg" alt="Afang soup packed for takeaway"><div class="gal-cap">Afang, Packed Fresh</div>
+                </div>
+                <div class="col-6 col-md-4 gal-item" style="height:280px;" onclick="openLightbox('{{GAL5_IMG}}')">
+                    <img src="Bar2.jpeg" alt="Rooftop terrace dining"><div class="gal-cap">The Terrace</div>
+                </div>
+                <div class="col-6 col-md-4 gal-item" style="height:280px;" onclick="openLightbox('{{ONUNU_IMG}}')">
+                    <img src="Night.jpeg" alt="Onunu with fish pepper soup"><div class="gal-cap">Onunu &amp; Fish Pepper Soup</div>
+                </div>
+                <div class="col-6 col-md-4 gal-item" style="height:280px;" onclick="openLightbox('{{GAL6_IMG}}')">
+                    <img src="Roof.jpeg" alt="Shared plates on the table"><div class="gal-cap">Shared Plates</div>
+                </div>
+                <div class="col-6 col-md-4 gal-item" style="height:280px;" onclick="openLightbox('{{UKODO_IMG}}')">
+                    <img src="Bar.jpeg" alt="Ukodo with plantain"><div class="gal-cap">Ukodo, Bowl &amp; Plantain</div>
+                </div>
+                <div class="col-6 col-md-4 gal-item" style="height:280px;" onclick="openLightbox('{{GAL7_IMG}}')">
+                    <img src="Dan.jpeg" alt="Mah Dining Room exterior at dusk"><div class="gal-cap">Airport Road Frontage</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bead-divider"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+    <!-- ================= DELIVERY (with animated logos) ================= -->
+    <section id="delivery" class="bg-ink-2">
+        <div class="container">
+            <div class="section-head mx-auto text-center mb-5">
+                <p class="eyebrow">Delivery</p>
+                <h2 class="font-display">Bring Mah to Your Table</h2>
+                <p style="color:var(--ivory-dim)">Fresh, hot and packed with care — we deliver the full menu to your doorstep.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="delivery-card">
+                        <div class="delivery-icon">&#128666;</div>
+                        <h4>Fast &amp; Fresh</h4>
+                        <p>Delivered hot within 45 minutes across Benin City. We pack soups and swallows separately so they arrive perfect.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="delivery-card">
+                        <div class="delivery-icon">&#128230;</div>
+                        <h4>Eco Packaging</h4>
+                        <p>All meals come in biodegradable, heat-retaining containers. Soup is double-lidded to prevent spills.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="delivery-card">
+                        <div class="delivery-icon">&#128176;</div>
+                        <h4>No Hidden Fees</h4>
+                        <p>Free delivery on orders above &#8358;15,000. Small order fee is &#8358;1,500 — transparent and fair.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="delivery-card">
+                        <div class="delivery-icon">&#128222;</div>
+                        <h4>Call or Order Online</h4>
+                        <p>Order via phone, WhatsApp, or use our online order form. We confirm every order within 10 minutes.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Responsive Call to Action Buttons -->
+            <div class="d-grid d-sm-flex gap-3 justify-content-center mt-5">
+                <a href="#" class="btn btn-order" data-bs-toggle="modal" data-bs-target="#orderModal">Place a Delivery Order</a>
+                <a href="tel:+2347049437888" class="btn btn-bronze">Call to Order</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="bead-divider"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+    <!-- ================= RESERVATIONS ================= -->
+    <section id="reservations" class="bg-ink-2">
+        <div class="container">
+            <div class="section-head mx-auto text-center mb-5">
+                <p class="eyebrow">Reservations</p>
+                <h2 class="font-display">Book Your Table</h2>
+                <p style="color:var(--ivory-dim)">Tell us the day, the hour and the size of your party. We'll confirm by phone within the hour.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <div class="reserve-panel">
+                        <form id="reservationForm" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" name="name" placeholder="Your name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" name="phone" placeholder="+234 8xx xxx xxxx" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" name="email" placeholder="you@email.com" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Party Size</label>
+                                    <select class="form-select" name="guests" required>
+                                        <option value="" selected disabled>Select</option>
+                                        <option>1 &ndash; 2 Guests</option>
+                                        <option>3 &ndash; 5 Guests</option>
+                                        <option>6 &ndash; 10 Guests</option>
+                                        <option>10+ Guests (Private Dining)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Date</label>
+                                    <input type="date" class="form-control" name="date" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Time</label>
+                                    <input type="time" class="form-control" name="time" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Occasion</label>
+                                    <select class="form-select" name="occasion">
+                                        <option value="Casual Dining" selected>Casual Dining</option>
+                                        <option>Birthday</option>
+                                        <option>Anniversary</option>
+                                        <option>Business Meeting</option>
+                                        <option>Family Gathering</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Special Request</label>
+                                    <textarea class="form-control" name="request" rows="3" placeholder="Allergies, seating preference, celebration notes..."></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-bronze w-100 w-md-auto">Confirm Reservation</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="reserve-side">
+                        <p class="eyebrow mb-3">Good to Know</p>
+                        <ul class="list-unstyled">
+                            <li><b>Opening Hours</b><br>Monday &ndash; Sunday, 10:00am &ndash; 10:00pm</li>
+                            <li><b>Location</b><br>Airport Road, Benin City, Edo State</li>
+                            <li><b>Private Dining</b><br>Available for parties of 10 and above, 48 hours' notice</li>
+                            <li><b>Dress Code</b><br>Smart casual, evenings from 6pm</li>
+                            <li><b>Deposits</b><br>Groups of 6+ require a &#8358;10,000 holding deposit</li>
+                        </ul>
+                        <div class="bead-divider" style="margin:1.6rem 0;"><span></span><span></span><span></span><span></span><span></span></div>
+                        <p style="font-size:.85rem;color:var(--ivory-dim);">For same-day bookings, please call us directly &mdash; reservations made within 3 hours of arrival are confirmed by phone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-head mx-auto text-center mb-5">
+                <p class="eyebrow">Contact</p>
+                <h2 class="font-display">Find Us on Airport Road</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="contact-card mb-3">
+                        <p class="eyebrow mb-2">Address</p>
+                        <p class="mb-0" style="color:var(--ivory-dim)">Mah Dining Room, Airport Road, Benin City, Edo State, Nigeria</p>
+                    </div>
+                    <div class="contact-card mb-3">
+                        <p class="eyebrow mb-2">Phone &amp; WhatsApp</p>
+                        <p class="mb-0" style="color:var(--ivory-dim)">+234 704 943 7888</p>
+                    </div>
+                    <div class="contact-card mb-3">
+                        <p class="eyebrow mb-2">Email</p>
+                        <p class="mb-0" style="color:var(--ivory-dim)">roycemahmud@gmail.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <p class="eyebrow mb-3">Send an Enquiry</p>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Your name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="3" placeholder="How can we help?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-outline-ivory w-100">Send Enquiry</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <iframe class="map-frame w-100 h-100" style="min-height:460px;" loading="lazy" allowfullscreen
+                    src="https://www.google.com/maps?q=Airport+Road,+Benin+City,+Edo+State,+Nigeria&output=embed">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="brand-mark mb-3"><span class="ring">M</span> Mah Dining Room</div>
+                <p style="color:var(--ivory-dim); font-size:.88rem;">South-South Nigerian cuisine on Airport Road, Benin City &mdash; founded by Chef Mahmud.</p>
+                <div class="d-flex gap-2 mt-3">
+                    <a href="#" class="social-ring" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+                    <a href="#" class="social-ring" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M15 3h-2a4 4 0 0 0-4 4v3H6v4h3v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    <a href="#" class="social-ring" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 20l1.4-4.1A8 8 0 1 1 9 19.4z"/></svg></a>
+                </div>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h6>Explore</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#delivery">Delivery</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h6>Menu</h6>
+                <ul class="list-unstyled d-flex flex-column gap-2">
+                    <li><a href="#menu">Main Dish</a></li>
+                    <li><a href="#menu">Grills &amp; Protein</a></li>
+                    <li><a href="#menu">Small Chops</a></li>
+                    <li><a href="#menu">Drinks</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h6>Visit</h6>
+                <p style="color:var(--ivory-dim); font-size:.88rem;">Airport Road, Benin City, Edo State, Nigeria<br>Daily, 10:00am &ndash; 10:00pm<br>+234 704 943 7888</p>
+                <div class="d-flex flex-wrap gap-2 mt-2">
+                    <a href="#" class="btn btn-delivery btn-sm" data-bs-toggle="modal" data-bs-target="#orderModal">Order Online</a>
+                    <a href="tel:+2347049437888" class="btn btn-bronze btn-sm">Call Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="foot-bottom text-center">
+            &copy; <span id="year"></span> Mah Dining Room. All rights reserved. Founded by Chef Mahmud.
+        </div>
+    </div>
+</footer>
+
+<!-- Toast -->
+<div id="rsvToast"><strong>Reservation received.</strong><div id="rsvToastBody" style="margin-top:.3rem;color:var(--ivory-dim)"></div></div>
+
+<!-- Lightbox -->
+<div class="lightbox-backdrop" id="lightbox" onclick="closeLightbox(event)">
+    <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+    <img id="lightboxImg" src="" alt="Enlarged view">
+</div>
+
+<!-- ================= ORDER MODAL ================= -->
+<div class="modal fade order-modal" id="orderModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title font-display" style="color:var(--bronze-soft);">Place Your Order</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="orderForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Your name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="+234 8xx xxx xxxx" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Delivery Address</label>
+                            <input type="text" class="form-control" placeholder="Street, landmark, city" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Delivery Time</label>
+                            <select class="form-select">
+                                <option selected>As soon as possible</option>
+                                <option>Within 1 hour</option>
+                                <option>Within 2 hours</option>
+                                <option>Schedule for later</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Order Items</label>
+                            <textarea class="form-control" rows="4" placeholder="List the dishes you'd like to order (e.g. 2x Afang, 1x Suya, 3x Zobo...)" required></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Preferred Payment</label>
+                            <select class="form-select">
+                                <option selected>Cash on Delivery</option>
+                                <option>Bank Transfer (pre-order)</option>
+                                <option>Pay on Pickup</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Special Instructions</label>
+                            <input type="text" class="form-control" placeholder="Extra pepper, no onions, etc.">
+                        </div>
+                    </div>
+                </form>
+                <div class="mt-3 small" style="color:var(--ivory-dim);">
+                    <span class="badge bg-success me-1">&#10003;</span> We'll call to confirm your order within 10 minutes.
+                    <span class="badge bg-success ms-2 me-1">&#10003;</span> Free delivery on orders above &#8358;15,000.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-ivory" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-order" id="submitOrderBtn">Place Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // Footer year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // ===== Menu filtering =====
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        function applyFilter(cat) {
+            filterButtons.forEach(b => b.classList.toggle('active', b.dataset.filter === cat));
+            menuItems.forEach(item => {
+                const match = cat === 'all' || item.dataset.cat === cat;
+                item.style.display = match ? '' : 'none';
+            });
+        }
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
+        });
+        document.querySelectorAll('[data-cat]').forEach(link => {
+            if (link.tagName === 'A' && link.dataset.cat) {
+                link.addEventListener('click', (e) => {
+                    applyFilter(link.dataset.cat);
+                });
+            }
+        });
+
+        // ===== Reservation form =====
+        const rsvForm = document.getElementById('reservationForm');
+        const toast = document.getElementById('rsvToast');
+        const toastBody = document.getElementById('rsvToastBody');
+        rsvForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (!rsvForm.checkValidity()) {
+                rsvForm.classList.add('was-validated');
+                return;
+            }
+            const data = new FormData(rsvForm);
+            const name = data.get('name');
+            const date = data.get('date');
+            const time = data.get('time');
+            toastBody.textContent = `Thank you, ${name}. We're holding your table for ${date} at ${time}. A confirmation call is on its way.`;
+            toast.classList.add('show');
+            rsvForm.reset();
+            setTimeout(() => toast.classList.remove('show'), 6000);
+        });
+
+        // ===== Contact form =====
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            toastBody.textContent = "Thanks for reaching out — our team will reply within one business day.";
+            toast.classList.add('show');
+            contactForm.reset();
+            setTimeout(() => toast.classList.remove('show'), 6000);
+        });
+
+        // ===== Order form =====
+        document.getElementById('submitOrderBtn').addEventListener('click', function() {
+            toastBody.textContent = "✅ Your order has been received! We'll call to confirm delivery details within 10 minutes.";
+            toast.classList.add('show');
+            const modal = bootstrap.Modal.getInstance(document.getElementById('orderModal'));
+            if (modal) modal.hide();
+            document.getElementById('orderForm').reset();
+            setTimeout(() => toast.classList.remove('show'), 7000);
+        });
+
+        // ===== Gallery lightbox =====
+        window.openLightbox = function(src) {
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('lightbox').classList.add('show');
+        }
+
+        window.closeLightbox = function(e) {
+            document.getElementById('lightbox').classList.remove('show');
+        }
+
+        // ===== Smooth dropdown from menu filter =====
+        document.querySelectorAll('.dropdown-item[data-cat]').forEach(el => {
+            el.addEventListener('click', function(e) {
+                e.preventDefault();
+                const cat = this.dataset.cat;
+                applyFilter(cat);
+                document.querySelector('#menu').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // ===== Intersection Observer for Testimonials =====
+        const testiCards = document.querySelectorAll('.testi-card');
+        if (testiCards.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.25 });
+
+            testiCards.forEach(card => observer.observe(card));
+        }
+
+    });
+</script>
+</body>
+</html>
